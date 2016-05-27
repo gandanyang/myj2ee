@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style type="text/css">
+            body,html{
+				width: 100%;/*设置页面的宽度*/
+				height: 100%;/*设置页面的高度*/
+				padding:0px;
+				margin:0px;
+				font-family: 'Microsoft Yahei';
+				font-size: 14px;
+			}
+        </style>
+        <title>开心水果店</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class=\"top\" bgcolor="FFFFFF" >
+        欢迎！您已来到开心水果店..再买点东西吗？.<a href="login.html">返回登陆</a>
+        <h1>开心水果店</h1>
+        </div>
+        <form name="purchaseMore" action="shoppingCar" method="post">
+          <table align="center" border="2" align="center">
+            <tr align="center"><td align="center" width="40%">芒果</td>
+                    <td width="50%"><div align="left">数量<input type="text" name="numx"></input>*0.5kg</div></td></tr>
+            <tr align="center"><td align="center" width="40%">橙子</td>
+                <td width="50%"><div align="left">数量<input type="text" name="numy"></input>*0.5kg</div></td></tr>
+            <tr align="center"><td align="center" width="40%">哈密瓜</td>
+                <td width="50%"><div align="left">数量<input type="text" name="numz"></input>*0.5kg</div></td></tr>
+          </table>
+            <p align="center"> <input type="submit"name="jiesuan"value="结算"></input></p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!--
+5.23 js 初步验证版 账号密码不能为空 否则提交失败
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+         <style type="text/css">
+            body,html{
+				width: 100%;/*设置页面的宽度*/
+				height: 100%;/*设置页面的高度*/
+				padding:0px;
+				margin:0px;
+				font-family: 'Microsoft Yahei',"宋体";
+				font-size: 14px;
+			}
+        </style>
+        <meta http-equiv="Content-Type" content="txt/html charset=UTF-8">
+               <title>登陆</title>
+    </head>
+    <body bgcolor=#FFB6C1>
+        <h1 align="center"><b>欢迎登陆系统</b></h1>
+        <form  name="login" action="Main" method="post" onsubmit="return check.regCheck();">
+            <p></p>
+            <table width="52%" border="2" align="center">
+                <tr bgcolor="#FFFFCCC">
+                    <td align="center" width="43%">
+                        <div align="center">用户名</div></td>
+                        <td width="57%"><div align="left">
+                                <input type="text" id="userID" name="userID" value="" placeholder="gdy">
+                        </div></td>
+                </tr>
+                 <tr bgcolor="#CCFF99">
+                    <td align="center" width="43%">
+                        <div align="center">密码</div>
+                    </td>
+                    <td width="57%">
+                        <div align="left">
+                        <input type="password" id="password" name="password" value="" placeholder="123456">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <p align="center">
+                <input type="reset" name="reset" value="重置">
+                <input type="submit" name="tj" value="提交">
+            </p>
+            </form>
+        <script>
+            var check={};
+            check.$=function(id){
+                return document.getElementById(id);
+            }
+            check.regCheck=function(){
+                var uid=check.$("userID");
+                var upwd=check.$("password");
+                if(uid.value==""){
+                    alert('账户不能为空！');
+                    return false;
+                }
+                if(upwd.value==""){
+                    alert('密码不能为空！');
+                    return false; 
+                }
+                return true;
+            }
+        </script>
+    </body>         
+</html>

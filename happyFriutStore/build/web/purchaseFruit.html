@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style type="text/css">
+            body,html{
+				width: 100%;/*设置页面的宽度*/
+				height: 100%;/*设置页面的高度*/
+				padding:0px;
+				margin:0px;
+				font-family: 'Microsoft Yahei',"宋体";
+				font-size: 14px;
+			}
+        </style>
+        <title>开心水果店</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class=\"top\" bgcolor="FFFFFF" >
+        欢迎！您已来到开心水果店..祝 购物愉快！.<a href="login.html">返回登陆</a>
+        <h1>开心水果店</h1>
+        </div>
+        <form name="purchaseFruit" action="shoppingCar"  method="post" onsubmit="return check.regCheck();">
+          <table width="60%" align="center" border="2" align="center">
+            <tr align="center"><td align="center" width="43%"><div>芒果</div></td>
+                    <td width="57%"><div align="center">数量<input type="text" id="mangguo" name="numa"></input>*0.5kg</div></td></tr>
+            <tr align="center"><td align="center" width="43%"><div>橙子</div></td>
+                <td width="57%"><div align="center">数量<input type="text" id="chengzi" name="numb"></input>*0.5kg</div></td></tr>
+            <tr align="center"><td align="center" width="43%"><div>哈密瓜</div></td>
+                <td width="57%"><div align="center">数量<input  type="text" id="hamigua" name="numc"></input>*0.5kg</div></td></tr>
+          </table>
+            <p align="center"> <input type="submit"name="js"value="结算"></input></p>
+        </form>
+        <script>
+            var check={};
+            check.$=function(id){
+                return document.getElementById(id);
+            }
+            check.regCheck=function(){
+                var mid=check.$("mangguo");
+                var cid=check.$("chengzi");
+                var hid=check.$("hamigua");
+                if(mid.value==''|cid.value==''|hid.value==''){
+                    alert('您还没有填写芒果购买数量！（不需要请填0）');
+                    return false;
+                }
+                if(cid.value==''){
+                    alert('您还没有填写橙子购买数量！（不需要请填0）');
+                    return false;
+                }
+                if(hid.value==''){
+                    alert('您还没有填写哈密瓜购买数量！（不需要请填0）');
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
